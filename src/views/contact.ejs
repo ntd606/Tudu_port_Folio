@@ -1,0 +1,76 @@
+<%- include('partials/header') %>
+
+<main class="bg-stone-50 py-20">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl serif italic mb-4">Liên hệ với Tudu</h1>
+            <p class="uppercase tracking-[0.2em] text-xs text-stone-500">Hãy để chúng tôi cùng bạn lưu giữ những khoảnh khắc</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div class="space-y-12">
+                <div>
+                    <h3 class="serif text-2xl mb-4">Thông tin kết nối</h3>
+                    <p class="text-stone-500 font-light leading-relaxed mb-8">
+                        Bạn có ý tưởng cho một bộ ảnh mới hay muốn nhận báo giá các gói chụp? Đừng ngần ngại gửi tin nhắn cho tớ nhé.
+                    </p>
+                    
+                    <div class="space-y-4 text-sm tracking-wide">
+                        <div class="flex items-center space-x-4">
+                            <span class="font-bold uppercase w-20">Địa chỉ:</span>
+                            <span class="text-stone-600">165 Dương Quảng Hàm, Nghĩa Đô, Cầu Giấy, TP. Hà Nội</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <span class="font-bold uppercase w-20">Hotline:</span>
+                            <span class="text-stone-600">0979 807 919</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <span class="font-bold uppercase w-20">Email:</span>
+                            <span class="text-stone-600">dung.661999@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="aspect-video bg-stone-200 overflow-hidden shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=800" 
+                         alt="Studio Contact" class="w-full h-full object-cover grayscale">
+                </div>
+            </div>
+
+            <div class="bg-white p-8 md:p-12 shadow-sm border border-stone-100">
+                <form action="/contact" method="POST" class="space-y-6">
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest font-semibold mb-2">Họ và tên</label>
+                        <input type="text" name="name" required class="w-full border-b border-stone-300 py-2 focus:border-stone-800 outline-none transition duration-300 bg-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest font-semibold mb-2">Email</label>
+                        <input type="email" name="email" required class="w-full border-b border-stone-300 py-2 focus:border-stone-800 outline-none transition duration-300 bg-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest font-semibold mb-2">Số điện thoại</label>
+                        <input type="tel" name="phone" required placeholder="0xxx xxx xxx" class="w-full border-b border-stone-300 py-2 focus:border-stone-800 outline-none transition duration-300 bg-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest font-semibold mb-2">Dịch vụ quan tâm</label>
+                        <select name="service" class="w-full border-b border-stone-300 py-2 focus:border-stone-800 outline-none transition duration-300 bg-transparent text-stone-600">
+                            <option value="graduation">Chụp ảnh Kỷ yếu</option>
+                            <option value="studio">Chụp ảnh Studio</option>
+                            <option value="wedding">Phóng sự Cưới</option>
+                            <option value="other">Khác</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest font-semibold mb-2">Tin nhắn</label>
+                        <textarea name="message" rows="4" required class="w-full border-b border-stone-300 py-2 focus:border-stone-800 outline-none transition duration-300 bg-transparent resize-none"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-stone-900 text-white py-4 uppercase text-xs tracking-[0.2em] font-bold hover:bg-stone-800 transition duration-300 mt-4">
+                        Gửi lời nhắn
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+<%- include('partials/footer') %>

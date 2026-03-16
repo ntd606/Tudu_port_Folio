@@ -1,0 +1,23 @@
+# Dependency directories (Cực kỳ quan trọng, thư mục này rất nặng)
+node_modules/
+
+# Environment variables (Chứa mật khẩu Database, Token... cần bảo mật)
+.env
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS mảng (Các file rác của hệ điều hành)
+.DS_Store
+Thumbs.db
+
+# IDEs and Editors (Cấu hình riêng của VS Code hoặc WebStorm)
+.vscode/
+.idea/
+
+# Public assets (Tùy chọn)
+# Nếu sau này bạn có thư mục chứa ảnh tạm hoặc ảnh upload từ khách hàng
+# mà không muốn lưu vĩnh viễn trên Git thì thêm vào đây:
+# public/images/uploads/
