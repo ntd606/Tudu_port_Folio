@@ -1,0 +1,42 @@
+<%- include('partials/header') %> 
+
+<header class="relative h-[90vh] flex items-center justify-center overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=2000" 
+         alt="Hero Wedding" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 bg-black/30"></div>
+    <div class="relative text-center text-white px-4">
+        <h1 class="text-5xl md:text-7xl mb-4 italic">Kể câu chuyện tình yêu của bạn</h1>
+        <p class="text-lg md:text-xl font-light tracking-wide uppercase">Tinh tế - Cảm xúc - Vĩnh cửu</p>
+        <div class="mt-8">
+            <a href="#gallery" class="bg-white text-stone-900 px-10 py-4 rounded-full font-medium hover:bg-amber-50 transition">Xem bộ sưu tập</a>
+        </div>
+    </div>
+</header>
+
+<section class="max-w-4xl mx-auto py-24 px-6 text-center">
+    <span class="text-amber-600 uppercase tracking-[0.3em] text-sm italic">Chào mừng bạn đến với <%= studioName %></span>
+    <h2 class="text-4xl mt-4 mb-6 leading-tight">Mỗi khung hình là một lời thề nguyện không bao giờ phai mờ.</h2>
+    <p class="text-stone-500 leading-relaxed">
+        Chúng tôi không chỉ chụp ảnh, chúng tôi ghi lại những rung động chân thành nhất.
+        Với phong cách nghệ thuật tối giản nhưng đầy cảm xúc, <%= studioName %> tự hào là người đồng hành trong ngày trọng đại của hơn 500 cặp đôi.
+    </p>
+</section>
+
+<section id="gallery" class="px-4 pb-24">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="overflow-hidden group cursor-pointer">
+            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=800" 
+                 class="w-full h-[500px] object-cover group-hover:scale-110 transition duration-700">
+        </div>
+        <div class="overflow-hidden group cursor-pointer md:mt-12">
+            <img src="https://images.unsplash.com/photo-1522673607200-1648832cee98?auto=format&fit=crop&q=80&w=800" 
+                 class="w-full h-[500px] object-cover group-hover:scale-110 transition duration-700">
+        </div>
+        <div class="overflow-hidden group cursor-pointer">
+            <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=800" 
+                 class="w-full h-[500px] object-cover group-hover:scale-110 transition duration-700">
+        </div>
+    </div>
+</section>
+
+<%- include('partials/footer') %>
