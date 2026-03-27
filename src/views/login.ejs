@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập | Tudu Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+        body { font-family: 'Montserrat', sans-serif; }
+        .tab-active { border-bottom: 2px solid #1c1917; color: #1c1917; font-weight: 600; }
+        .admin-glow { border-color: #d97706 !important; } /* Màu amber-600 */
+    </style>
+</head>
+<body class="bg-stone-50 flex items-center justify-center min-h-screen p-4">
+    <div class="max-w-md w-full">
+        <div class="text-center mb-10">
+            <h1 class="text-3xl font-light tracking-[0.3em] uppercase text-stone-800">Tudu Studio</h1>
+        </div>
+        <div class="bg-white shadow-sm border border-stone-200 overflow-hidden">           
+            <div class="flex border-b border-stone-100 bg-stone-50/50">
+                <button id="tab-client" onclick="switchTab('client')" 
+                        class="w-1/2 py-4 text-[10px] uppercase tracking-widest text-stone-400 tab-active transition-all outline-none">
+                    Khách hàng
+                </button>
+                <button id="tab-admin" onclick="switchTab('admin')" 
+                        class="w-1/2 py-4 text-[10px] uppercase tracking-widest text-stone-400 transition-all outline-none">
+                    Quản trị viên
+                </button>
+            </div>
+            <div class="p-8 md:p-10">
+                <form id="login-form" action="/login" method="POST" class="space-y-6">
+                    <input type="hidden" name="role" id="user-role" value="client">
+                    <div id="form-description" class="text-[11px] text-stone-400 italic mb-4">
+                        Dành cho khách hàng.
+                    </div>
+                    <div>
+                        <label class="block text-[10px] uppercase tracking-[0.2em] font-bold text-stone-400 mb-2">Tên đăng nhập / Email</label>
+                        <input type="text" name="username" required 
+                               class="w-full border-b border-stone-200 py-2 focus:border-stone-800 outline-none transition duration-500 bg-transparent text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] uppercase tracking-[0.2em] font-bold text-stone-400 mb-2">Mật khẩu</label>
+                        <input type="password" name="password" required 
+                               class="w-full border-b border-stone-200 py-2 focus:border-stone-800 outline-none transition duration-500 bg-transparent text-sm">
+                    </div>
+                    <div id="admin-key-container" style="display: none;" class="animate-pulse">
+                        <label class="block text-[10px] uppercase tracking-[0.2em] font-bold text-amber-600 mb-2">Admin Key (Mã xác thực)</label>
+                        <input type="text" name="adminKey" placeholder="Nhập mã để đăng ký Admin"
+                               class="w-full border-b border-amber-200 py-2 focus:border-amber-600 outline-none transition duration-500 bg-transparent text-sm text-amber-900 placeholder:text-stone-300">
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-3 pt-4">
+                        <button type="submit" name="action" value="login"
+                                class="flex-1 bg-stone-900 text-white py-4 text-[11px] uppercase tracking-[0.2em] font-bold hover:bg-stone-800 transition duration-300 shadow-md">
+                            Đăng nhập
+                        </button>
+                        <button type="submit" name="action" value="register"
+                                class="flex-1 border border-stone-800 text-stone-800 py-4 text-[11px] uppercase tracking-[0.2em] font-bold hover:bg-stone-50 transition duration-300">
+                            Đăng ký
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="text-center mt-8">
+            <a href="/dashboard" class="text-[10px] uppercase tracking-widest text-stone-400 hover:text-stone-800 transition italic">
+                ← Trở về trang chủ
+            </a>
+        </div>
+    </div>
+    <script>
+        function switchTab(role) {
+            const clientTab = document.getElementById('tab-client');
+            const adminTab = document.getElementById('tab-admin');
+            const roleInput = document.getElementById('user-role');
+            const desc = document.getElementById('form-description');
+            const adminKeyBox = document.getElementById('admin-key-container');
+            if (role === 'admin') {
+                // Kích hoạt Tab Admin
+                adminTab.classList.add('tab-active');
+                clientTab.classList.remove('tab-active');
+                roleInput.value = 'admin';
+                desc.innerText = 'Khu vực hạn chế dành riêng cho nhiếp ảnh gia Tudu.';
+                // Hiện ô nhập Admin Key
+                adminKeyBox.style.display = 'block';
+            } else {
+                // Kích hoạt Tab Khách
+                clientTab.classList.add('tab-active');
+                adminTab.classList.remove('tab-active');
+                roleInput.value = 'client';
+                desc.innerText = 'Dành cho khách hàng.';
+                // Ẩn ô nhập Admin Key
+                adminKeyBox.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
