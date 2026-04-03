@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch vụ | Tudu Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+        body { font-family: 'Montserrat', sans-serif; }
+        .service-card:hover img { transform: scale(1.05); }
+    </style>
+</head>
+<body class="bg-white text-stone-900">
+
+    <%- include('partials/header') %>
+
+    <main class="pt-24 pb-20">
+        <section class="max-w-7xl mx-auto px-6 text-center mb-16">
+            <h2 class="text-4xl font-light tracking-[0.4em] uppercase mb-4">Dịch vụ</h2>
+            <div class="h-1 w-20 bg-stone-800 mx-auto mb-6"></div>
+            <p class="text-stone-500 max-w-2xl mx-auto italic">"Hãy lưu giữ những khoảnh khắc quý giá của bạn qua ống kính chuyên nghiệp của Tudu Studio."</p>
+        </section>
+
+        <section class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            
+            <div class="service-card group cursor-pointer">
+                <div class="overflow-hidden mb-4 aspect-[3/4]">
+                    <img src="/images/TTC09526.png" 
+                         alt="Chụp ảnh Kỷ yếu" class="w-full h-full object-cover transition duration-700">
+                </div>
+                <h3 class="text-lg font-semibold uppercase tracking-widest mb-2">Kỷ Yếu</h3>
+                <p class="text-sm text-stone-500 mb-4 line-clamp-2">Thanh xuân đóng gói, kỷ niệm mang theo. Lưu lại những ký ức đẹp nhất thời học sinh, sinh viên của bạn.</p>
+                <a href="/contact" class="text-[11px] font-bold uppercase border-b border-stone-800 pb-1 hover:text-amber-600 hover:border-amber-600 transition">Xem báo giá</a>
+            </div>
+
+            <div class="service-card group cursor-pointer">
+                <div class="overflow-hidden mb-4 aspect-[3/4]">
+                    <img src="/images/DUN04187.png" 
+                         alt="Chụp ảnh Tốt nghiệp" class="w-full h-full object-cover transition duration-700">
+                </div>
+                <h3 class="text-lg font-semibold uppercase tracking-widest mb-2">Tốt Nghiệp</h3>
+                <p class="text-sm text-stone-500 mb-4 line-clamp-2">Hôm nay là kỷ niệm, ngày mai là hành trình. Ghi dấu cột mốc quan trọng của cuộc đời bạn.</p>
+                <a href="/contact" class="text-[11px] font-bold uppercase border-b border-stone-800 pb-1 hover:text-amber-600 hover:border-amber-600 transition">Xem báo giá</a>
+            </div>
+
+            <div class="service-card group cursor-pointer">
+                <div class="overflow-hidden mb-4 aspect-[3/4]">
+                    <img src="/images/TTC00112.png" 
+                         alt="Chụp ảnh Gia đình" class="w-full h-full object-cover transition duration-700">
+                </div>
+                <h3 class="text-lg font-semibold uppercase tracking-widest mb-2">Gia Đình</h3>
+                <p class="text-sm text-stone-500 mb-4 line-clamp-2">Gia đình là điểm tựa, kỷ niệm là hành trang. Những khung hình ấm áp nhất dành cho tổ ấm của bạn.</p>
+                <a href="/contact" class="text-[11px] font-bold uppercase border-b border-stone-800 pb-1 hover:text-amber-600 hover:border-amber-600 transition">Xem báo giá</a>
+            </div>
+
+            <div class="service-card group cursor-pointer">
+                <div class="overflow-hidden mb-4 aspect-[3/4]">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80" 
+                         alt="Chụp ảnh Sự kiện" class="w-full h-full object-cover transition duration-700">
+                </div>
+                <h3 class="text-lg font-semibold uppercase tracking-widest mb-2">Sự Kiện</h3>
+                <p class="text-sm text-stone-500 mb-4 line-clamp-2">Chụp ảnh hội nghị, workshop, khai trương với phong cách chuyên nghiệp, bắt trọn khoảnh khắc.</p>
+                <a href="/contact" class="text-[11px] font-bold uppercase border-b border-stone-800 pb-1 hover:text-amber-600 hover:border-amber-600 transition">Xem báo giá</a>
+            </div>
+
+            <div class="service-card group cursor-pointer">
+                <div class="overflow-hidden mb-4 aspect-[3/4]">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80" 
+                         alt="Chụp ảnh Tiệc cưới" class="w-full h-full object-cover transition duration-700">
+                </div>
+                <h3 class="text-lg font-semibold uppercase tracking-widest mb-2">Tiệc Cưới / Phóng Sự</h3>
+                <p class="text-sm text-stone-500 mb-4 line-clamp-2">Đồng hành cùng bạn trong ngày trọng đại nhất cuộc đời với phong cách phóng sự tự nhiên.</p>
+                <a href="/contact" class="text-[11px] font-bold uppercase border-b border-stone-800 pb-1 hover:text-amber-600 hover:border-amber-600 transition">Xem báo giá</a>
+            </div>
+
+            <div class="service-card group cursor-pointer">
+                <div class="overflow-hidden mb-4 aspect-[3/4]">
+                    <img src="/images/TTC01482.png" 
+                         alt="Chụp ảnh Du lịch" class="w-full h-full object-cover transition duration-700">
+                </div>
+                <h3 class="text-lg font-semibold uppercase tracking-widest mb-2">Du Lịch / Outdoor</h3>
+                <p class="text-sm text-stone-500 mb-4 line-clamp-2">Đi cùng bạn đến bất cứ đâu để lưu lại những chuyến đi đầy cảm hứng.</p>
+                <a href="/contact" class="text-[11px] font-bold uppercase border-b border-stone-800 pb-1 hover:text-amber-600 hover:border-amber-600 transition">Xem báo giá</a>
+            </div>
+
+        </section>
+    </main>
+
+    <%- include('partials/footer') %>
+
+</body>
+</html>

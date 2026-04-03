@@ -16,6 +16,10 @@ router.get('/contact', (req, res) => {
     res.render('contact', { studioName: 'Tudu Studio' });
 });
 
+router.get('/services', (req, res) => {
+    res.render('services', { studioName: 'Tudu Studio' });
+});
+
 // Route xử lý khi khách hàng gửi form (POST)
 router.post('/contact', (req, res) => {
     const { name, email, service, message } = req.body;
